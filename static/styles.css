@@ -1,0 +1,174 @@
+#brand
+{
+    text-align: center;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+
+body {
+    background-color: whitesmoke; }
+  
+h1 {
+text-align: center;
+margin-top: 1em;
+margin-bottom: 1em; }
+
+h5 {
+text-align: center;
+margin-top: 10px;
+margin-bottom: 10px; }
+
+p {
+width: 80%;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px; }
+
+ul.nonnav {
+width: 80%;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px; }
+
+footer {
+padding-top: 1em;
+width: 80%;
+margin: auto;
+/* line-height: 90%; */
+font-size: small; }
+footer hr {
+    border-top: 1px solid black; }
+
+.whole {
+text-align: center;
+margin: auto;
+/* padding: 30px 30px 30px 0; */ }
+
+table {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+margin-top: 1em;
+margin-bottom: 2em;
+border: 2px solid black;
+border-collapse: collapse; }
+
+th, td {
+    border: 1px solid black;
+    padding: 5px; }
+
+th {
+    background-color: gray; }
+
+td {
+    background-color: white; }
+
+hr {
+    border-top: 1px solid black; }
+
+.container {
+    width: 80%; }
+
+#login, #register {
+    width: 70%;
+    margin: auto;
+    border: 2px solid black;
+    padding: 30px;
+    background-color:rgb(238, 231, 229) }
+
+#home {
+    font-size:xx-large;
+}
+
+#brandpic 
+    { width: 10% }
+
+img.bookcover {
+    padding: 30px 30px 30px 0;
+    width: 15%; }
+      
+#bookplate {
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+    font-size: large;
+    /* color: white; */
+    /* background-color: #607d8b; */
+}
+    
+.nobullet {
+    list-style: none;
+    margin-top: auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.reviewblock {
+    border: 1px solid black;
+    margin-top: auto;
+    text-align: left;
+    padding: 20px;
+    background-color: #f5e3c7
+}
+
+#reviewtext {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.searchagain {
+    margin-top: auto;
+    padding: 30px;
+}
+
+#goodreads {
+    font-size:smaller;
+}

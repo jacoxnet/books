@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    DisplayBook
+{% endblock %}
+
+{% block main %}
+
+    <div id="bookplate">
+        <h3>
+            {{ book.title }}
+        </h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src={{ cover_url }} alt="Book Cover" id="bookcover">
+                </div>
+                <div class="col-lg-6">
+                    <ul class="nobullet">
+                        <li>ISBN: {{ book.isbn }}</li>
+                        <li>Author: {{ book.author }}</li>
+                        <li>Title: {{ book.title }}</li>
+                        <li>Year: {{ book.year }}</li>
+                        <li>Goodreads: {{ goodreads["review_num"]|commafy }} ratings</li>
+                        <li>Average rating: {{ goodreads["score"] }}</li>
+                        <li id="goodreads"><a href="https://www.goodreads.com">Visit Goodreads</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <div class="reviewblock">
+        <h5>
+            {% if review_count == 0 %}
+                No CX Books reviews yet
+            {% elif review_count == 1 %}
+                CX Books Review:
+            {% else %}
+                CX Books Reviews:
+            {% endif %}
+        </h5>
+        
+
+        {% if review_count > 0 %}
+            <ul class="nobullet">    
+                {% for review in reviews %}
+                    <li>
+                        {{ review.fullname }} ({{ review.username }}) gave the book a score of {{ review.score }} and wrote:
+                        "<span id="reviewtext">{{ review.review }}"</span>
+                        <br />
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    <div class="form-group searchagain">
+        <form action="/" method="get">
+            <button class="btn btn-primary" type="submit">New search</button>
+        </form>
+    </div>
+
+
+
+    <div class="submitreview">
+        <form action="{{ url_for('addreview', book_id=book.id) }}", method="post">
+            Please rate and review the book
+            <div class="form-group">
+                Rating (1 to 5):
+                <input autocomplete="off" class="form-control" name="myscore" type="number" min="1" max="5">
+            </div>
+            <div class="form-group">
+                <textarea style="min-width:100%" class="form-control" rows="3" name="myreview" type="text"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit review</button>
+        </form>
+    </div>
+
+{% endblock %}

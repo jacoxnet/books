@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    DisplaySearchResults
+{% endblock %}
+
+{% block main %}
+<h1>Search results</h1>
+    {% if count == 1 %}
+        <h5>1 book found</h5>
+    {% elif count == 0 %}
+        <h5>No books found</h5>
+    {% else %}
+        <h5>{{ count }} books found</h5>
+    {% endif %}
+
+    {% if count > 0 %}
+        <table>
+            <tr>
+                <th>ISBN</th>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Year Published</th>
+            </tr>
+            {% for book in books %}
+                <tr>
+                    <td><a href="{{ url_for('displaybook', book_id=book.id) }}">
+                        {{ book.isbn }}
+                    </a></td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.year }}</td>
+                    </a>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+  
+    <form action="/" method="get" class="searchagain">
+        <button class="btn btn-primary" type="submit">New search</button>
+    </form>
+
+{% endblock %}
