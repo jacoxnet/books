@@ -1,1 +1,0 @@
-I seemed to work around it by running pip3 uninstall Werkzeug followed by pip3 install Werkzeug==0.16.0. That gets the app to run, though I don't know specifically why. I wanted to capture it in an issue and the workaround for others who might encounter this.
