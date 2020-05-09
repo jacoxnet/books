@@ -96,6 +96,7 @@ $ flask run
   - matchingbooks.html
   - register.html
   - search.html
+  - import.py (loads the database with the data from books.csv)
 - static directory
   - book.png (app pic)
   - favicon.ico (icon version of app pic)
