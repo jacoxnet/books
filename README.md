@@ -1,10 +1,6 @@
-# Project 1
+# *CX Books*
 
-Web Programming with Python and JavaScript
-
-## *CX Books*
-
-This project was prepared to satisfy project1 in the online version of this class.
+This project was prepared to satisfy project1 in the online version of CS50x Web Programming with Python and JavaScript.
 
 ## Introduction
 
