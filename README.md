@@ -1,10 +1,8 @@
-# *CX Books*
-
-This project was prepared to satisfy project1 in the online version of CS50x Web Programming with Python and JavaScript.
-
-## Introduction
+# CX Books
 
 **CX Books** is a web application that allows users to see query information loaded in a database about 5000 books and to add and display reviews and ratings of these books.
+
+This project was prepared to satisfy project1 in the online version of CS50x Web Programming with Python and JavaScript.
 
 In addition to registration and login, there are three basic functional pages in the web app.
 
